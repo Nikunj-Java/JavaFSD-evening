@@ -1,0 +1,22 @@
+step1: create git-hub account
+step2: download git from google
+	link: https://git-scm.com/downloads
+step3: run and install git
+step4: check vesrion by opening cmd
+	git --version
+	
+	//initialiszing repository
+	git init
+	
+
+	git remote add origin
+
+
+	git branch add main
+
+	git commit -m "commit"
+	
+	git push -u origin main
+	
+
+	
