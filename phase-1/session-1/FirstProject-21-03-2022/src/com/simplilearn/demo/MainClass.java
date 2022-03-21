@@ -4,6 +4,7 @@ public class MainClass {
 	
 		
 	public static void main(String[] args) {
+		
 		int x=20;
 		int y =18;
 		
@@ -11,6 +12,9 @@ public class MainClass {
 			System.out.println("x is greater than y");
 					
 		}
+		
+		
+
 		
 		
 		
