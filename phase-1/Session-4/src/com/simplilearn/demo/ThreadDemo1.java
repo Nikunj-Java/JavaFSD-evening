@@ -30,6 +30,7 @@ public class ThreadDemo1 extends Thread {
 		
 		t1.setName("first");
 		t2.setName("Second");
+		
 		t1.start();
 		t2.start();
 		
