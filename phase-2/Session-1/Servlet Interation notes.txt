@@ -1,0 +1,83 @@
+
+***********Apache tom cat 9.0 Integration*****************
+
+1.download apache tomcat 9.0 server
+
+2.Link: https://tomcat.apache.org/download-90.cgi 
+  click on zip.
+3. Extract Zip file to specific location
+
+4. prepare new workspace and then open eclips ide and choose newly created workspace
+
+5. go to > new >others> server>select apche tomcat 9.0 > path of apache tomcat server> next > finish
+
+6. go to the bottom section of eclips and you will see server. right click on it and start the server. if all ok server will started without any error. if error percist again and again check all 1-5 procedure
+
+************Creating Project****************
+create a new dynamic web project
+
+>file>new> others> dynamic web project
+
+
+
+*****prepare first project like this************
+
+
+public class FirstServlet extends HttpServlet {
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		PrintWriter p= resp.getWriter();
+		p.write("Hello World");
+	}
+	
+	
+	
+	
+
+
+}
+
+*****************************index.html*******************
+
+goto >src>main>web-app> right click on it and prepare index.html file
+
+***********************************************************
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>First Demo</title>
+</head>
+<body>
+<a href="hello">Click Here</a>
+</body>
+</html>
+
+
+**********************************************************
+++++++++++++++++++++++Prepare web.xml file++++++++++++++++++
+**************************************************************
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>FirstDemo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <!-- configuring servlet -->
+  <servlet>
+  <servlet-name>first</servlet-name>
+  <servlet-class>com.simplilearn.servlet.FirstServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>first</servlet-name>
+  <url-pattern>/</url-pattern>
+  </servlet-mapping>
+</web-app>
