@@ -1,31 +1,25 @@
-package com.simplilearn.servlet;
+package com.simplilearn.demo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.GenericServlet;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class Demo extends GenericServlet{
-
+public class PostMappingDemo extends HttpServlet {
+	
 	@Override
-	public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		PrintWriter out= resp.getWriter();
+		
 		String username= req.getParameter("uname");
 		String password =req.getParameter("pass");
+		
 		out.print("Welcome "+username);
 		out.print("your password is: "+password);
-		
-		///print full name here: by taking fname and lname
-		//out.print("Full name is :" +fname +" "+lname);
 	}
-	
-	 
 
 }
