@@ -1,0 +1,16 @@
+
+create table 
+
+create table eproduct(ID bigint primary key auto_increment,name varchar(100),price decimal(10,2),date_added timestamp default now());
+ 
+
+describe eproduct;
+
+
+ insert into eproduct(name,price) values ('HP Laptop ABC',12000);
+ insert into eproduct(name,price) values ('DELL Laptop ABC',14000);
+ insert into eproduct(name,price) values ('ACER Laptop ABC',20000);
+ insert into eproduct(name,price) values ('LENOVO Laptop ABC',12000);
+
+
+SELECT * FROM eproduct
