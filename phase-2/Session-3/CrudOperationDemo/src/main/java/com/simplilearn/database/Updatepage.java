@@ -47,8 +47,8 @@ public class Updatepage extends HttpServlet {
 				PreparedStatement stmt=conn.prepareStatement("update student set fname=?,lname=?,password=? where email=?");
 						stmt.setString(1, fname);
 						stmt.setString(2, lname);
-						stmt.setString(3, email);
-						stmt.setString(4, password);
+						stmt.setString(3, password);
+						stmt.setString(4, email);
 					 
 				int rs= stmt.executeUpdate();
 				
