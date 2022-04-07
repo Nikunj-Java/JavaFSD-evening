@@ -3,10 +3,9 @@ package com.simplilearn.database;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.math.BigDecimal;
-import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 import javax.servlet.ServletException;
@@ -15,14 +14,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-
-@WebServlet("/save")
-public class SaveServlet extends HttpServlet {
+@WebServlet("/dbop")
+public class DBOperationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// TODO Auto-generated method stub
 
 		PrintWriter out = response.getWriter();
 
@@ -33,40 +31,29 @@ public class SaveServlet extends HttpServlet {
 
 		Connection conn = DBConfig.getConnection(props);
 
-		/*
-		 * if (conn != null) out.print("Connection is Established"); else
-		 * out.print("Error while connecting connection");
-		 */
-		
-		String name= request.getParameter("pname");
-		String price= request.getParameter("price");
-		
+		response.setContentType("text/html");
+		out.print("<h1> database Operation </h1>");
+
 		try {
-			CallableStatement stmt= conn.prepareCall("{call add_product(?,?)}");
-			
-			stmt.setString(1, name);
-			stmt.setBigDecimal(2, new BigDecimal(price));
-			
-			int x=stmt.executeUpdate();
-			
-			if(x>0) {
-				
-				System.out.println("Data inserted Successfully");
-				out.print("Data inserted Successfully"); 
-				response.sendRedirect("index.html");
-			}
-			else {
-				System.out.println("Error while uploading");
-				response.sendRedirect("index.html");
-			}
-			 
-			
+			Statement stmt = conn.createStatement();
+			stmt.execute("create database sample");
+
+			out.print("database Created");
+
+			stmt.execute("use sample");
+			out.print("database selected and changed <br>");
+
+			stmt.execute("drop database sample");
+			out.print("database dropped<br>");
+
+			stmt.close();
+			conn.close();
+			out.print("connection closed<br>");
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 
 	}
 
