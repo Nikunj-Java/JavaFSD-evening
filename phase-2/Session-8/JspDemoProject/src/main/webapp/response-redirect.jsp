@@ -7,20 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="test.jsp">Click Here</a>
-<br>
-<br>
-<a href="implicit.jsp">Click Here for implicit Object Demo</a>
 
-<%= "Welcome" +"User" %>
+<% 
 
+String office= request.getParameter("office");
 
-<br>
-<br>
-<%=7*6 %>
+if(office!=null){
+	out.print("Value of Office: "+office);
+}
+else{
+	out.print("No Office value available");
+}
+%>
 
-<br>
-
-<% out.println("Welcome User"); %>
 </body>
 </html>
