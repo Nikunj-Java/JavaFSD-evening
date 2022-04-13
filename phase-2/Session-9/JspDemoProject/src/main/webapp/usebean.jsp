@@ -18,15 +18,34 @@ id: <jsp:getProperty property="id" name="object"/>
 <br>
 Name: <jsp:getProperty property="name" name="object"/>
 <br>
+AadharCard: <jsp:getProperty property="adharCard" name="object"/>
+<br>
+Age: <jsp:getProperty property="age" name="object"/>
+<br>
+
+Sex: <jsp:getProperty property="sex" name="object"/>
+<br>
 
 <jsp:setProperty property="id" name="object" value="3"/>
-<jsp:setProperty property="name" name="object" value="Nikunj"/>
+<jsp:setProperty property="name" name="object" value="Arunita"/>
+<jsp:setProperty property="adharCard" name="object" value="123456781234"/>
+<jsp:setProperty property="age" name="object" value="25"/>
+<jsp:setProperty property="sex" name="object" value="Female"/>
+
+ 
 
 <h4>After Setting Property</h4>
 <br>
 id: <jsp:getProperty property="id" name="object"/>
 <br>
 Name: <jsp:getProperty property="name" name="object"/>
+<br>
+AadharCard: <jsp:getProperty property="adharCard" name="object"/>
+<br>
+Age: <jsp:getProperty property="age" name="object"/>
+<br>
+
+Sex: <jsp:getProperty property="sex" name="object"/>
 <br>
 
 

@@ -16,5 +16,12 @@ id: <jsp:getProperty property="id" name="object"/>
 <br>
 Name: <jsp:getProperty property="name" name="object"/>
 <br>
+AadharCard: <jsp:getProperty property="adharCard" name="object"/>
+<br>
+Age: <jsp:getProperty property="age" name="object"/>
+<br>
+
+Sex: <jsp:getProperty property="sex" name="object"/>
+<br>
 </body>
 </html>
