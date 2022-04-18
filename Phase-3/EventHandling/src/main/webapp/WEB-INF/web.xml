@@ -1,0 +1,26 @@
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <!-- To Prepare main Controller -->
+  <servlet>
+  	<servlet-name>main</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  
+  <!-- To Prepare main Controller -->
+  <servlet-mapping>
+  	<servlet-name>main</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <!-- To Declair Spring Bean File -->
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>/WEB-INF/main-servlet.xml</param-value>
+  </context-param>
+  
+  <!-- To Load Bean File We will Create Listner -->
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+</web-app>
