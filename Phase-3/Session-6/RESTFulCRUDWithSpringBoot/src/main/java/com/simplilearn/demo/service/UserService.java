@@ -55,6 +55,17 @@ public class UserService {
 	
 	// delete user by id - you need to implement
 	
+	public boolean deleteUser(int id) {
+		
+		if(repo.findById(id).isPresent()) {
+			repo.deleteById(id);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
 
 
 }
