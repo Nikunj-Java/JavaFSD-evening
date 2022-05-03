@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
 </head>
-<body>
+<body data-spy="scroll" target=".navbar">
     
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
         <a href="#" class="navbar-brand">Simplelearn</a>
         <ul class="navbar-nav"> 
             <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
+                <a href="#home" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Aboutus</a>
+                <a href="#aboutus" class="nav-link">Aboutus</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link dropdown-toggle" id="mydropdown" data-toggle="dropdown">Services</a>
@@ -30,12 +30,39 @@
             </li>
 
             <li class="nav-item">
-                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="#contactus" class="nav-link">Contact Us</a>
             </li>
         </ul>
 
         
     </nav>
+
+
+    <div id="home" class="container-fluid bg-success" style="padding-top: 80px; padding-bottom: 80px;">
+        <h1>Home Section</h1>
+        <h2> This is my First Section</h2>
+
+        <h3>Home Section</h3>
+        <p>Scroll here to get idea of scroll spy</p>
+    </div>
+
+
+    <div id="aboutus" class="container-fluid bg-primary" style="padding-top: 80px; padding-bottom: 80px;">
+        <h1>AboutUs Section</h1>
+        <h2> This is my Second Section</h2>
+
+        <h3>AboutUs Section</h3>
+        <p>Scroll here to get idea of scroll spy</p>
+    </div>
+
+
+    <div id="contactus" class="container-fluid bg-success" style="padding-top: 80px; padding-bottom: 80px;">
+        <h1>ContactUs Section</h1>
+        <h2> This is my First Section</h2>
+
+        <h3>ContactUs Section</h3>
+        <p>Scroll here to get idea of scroll spy</p>
+    </div>
         
 
 </body> 
