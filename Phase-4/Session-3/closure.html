@@ -8,6 +8,8 @@
 </head>
 <body>
     <script>
+
+        //let demo
         let x=20;
 
         function test(){
@@ -32,7 +34,7 @@
         test1();
         console.log("outside of block: "+y);
 
-
+        //var demo
         function test2(){
             //parent block
             if(true){
@@ -40,7 +42,7 @@
                 var a= "hello";
                 let b= "goodmorning";
                 const c="how are you?";
-                
+
                 console.log("let: "+b);//we can access 'let' within the block scope not outside of block scope
                 console.log("const: "+c);//we can access 'const' within the block scope not outside of block scope
             }
