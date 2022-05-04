@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function fetch(callback){
+            setTimeout(function(){
+                console.log("Data Fetched Afte 5 Seconds");
+            },5000);
+
+        }
+
+
+        function display(){
+            console.log("Display Data");
+        }
+        
+        fetch(display);
+    </script>
+</body>
+</html>
