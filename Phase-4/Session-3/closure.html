@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=20;
+
+        function test(){
+            console.log("In Block: "+x);
+            x=35;
+            console.log("After Change: "+x);
+        }
+
+        test();
+        console.log("outside of block: "+x);
+       
+
+        ///const demo
+        const y=10;
+        function test1(){
+            const y=20;
+            console.log("In Block: "+y);
+           // y=35;
+            //console.log("After Change: "+y);
+
+        }
+        test1();
+        console.log("outside of block: "+y);
+
+
+        function test2(){
+            //parent block
+            if(true){
+                //block scope
+                var a= "hello";
+                let b= "goodmorning";
+                const c="how are you?";
+                
+                console.log("let: "+b);//we can access 'let' within the block scope not outside of block scope
+                console.log("const: "+c);//we can access 'const' within the block scope not outside of block scope
+            }
+
+            console.log("Var: "+a);
+            //console.log("let: "+b);
+            //console.log("const: "+c);
+        }
+
+        test2();
+        
+         
+         
+    </script>
+    
+</body>
+</html>
