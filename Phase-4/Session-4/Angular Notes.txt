@@ -24,3 +24,37 @@ to check the version
 >tsc -v
 
 	output: 4.6.3
+
+
+----prepare one first.ts file in visual studio code as below-------
+
+
+let a:number;
+a=56;
+
+let b:number=12;
+
+let fname:string="Nikunj Soni";
+
+console.log(a+b);
+
+console.log(fname);
+
+
+function test(num1:number,num2:number):number{
+    return num1+num2;
+}
+console.log(test(2,3));
+
+
+--------------------------------------------------------------------
+
+goto>terminal>newterminal>choose cmd
+
+>tsc first.ts
+
+you will see that a new file named 'first.ts' is automatically prepared in the folder
+
+>node first.js
+
+you will see output in console
