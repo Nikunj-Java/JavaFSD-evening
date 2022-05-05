@@ -109,3 +109,47 @@ goto src>app>app.component.html file and edit the code whatever you want
 
 save it , it will be automatically updated in browser, that you cab check the same
 
+
+****************************************************************************
+STEP: 4 PREPARE ANGULAR COMPONENT
+****************************************************************************
+
+NOTE: add another terminal>cmd> and move to the root directory of app and execute the below code
+
+>ng generate component header  (OR ng g c header)   ////header is name
+
+goto> src>app>header>header.component.html and prepare the header 
+
+
+<h1> Header Works!</h1>
+
+
+goto >src>app>header>header.component.css and add a style
+
+
+h1 {
+    background-color: antiquewhite;
+}
+
+goto> header.component.ts and copy the selector name which is present inside
+
+@component{
+
+ selector: 'app-header',
+
+}
+
+
+
+goto> app.component.html
+
+write as below code
+
+<app-header></app-header>
+
+
+save it and you will be able to see the output in your browser
+
+
+
+similarly you can prepare footer component and integrate using above steps
