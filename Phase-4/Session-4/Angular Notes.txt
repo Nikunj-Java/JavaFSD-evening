@@ -58,3 +58,12 @@ you will see that a new file named 'first.ts' is automatically prepared in the f
 >node first.js
 
 you will see output in console
+
+
+prepare 'tsconfig.json' file: it is a file to configure JSON file
+
+
+how .ts converts .js we can configure in this file
+
+
+>tsc --init (will create tsconfig.json file and we can chheck the same)
