@@ -219,6 +219,62 @@ save it and check the output in browser
 
 ***************************************************************************
 
+STEP: 6 CLASS BINDING
+
+***************************************************************************
+
+
+---prepare one array of products in bindings.component.ts
+
+
+ products=[{name:"pencile",price:"8.3",available:"06-05-2022",ratings:4.8},
+            {name:"pen",price:"10",available:"10-05-2022",ratings:4.8},
+            {name:"eraser",price:"5.5",available:"06-06-2022",ratings:4.8},
+            {name:"scale",price:"8",available:"19-05-2022",ratings:4.8},
+            {name:"strencil",price:"15",available:"31-05-2022",ratings:4.8},
+            ]
+
+
+
+goto>binding.component.html to print the array using table along with ngDirective
+
+
+
+ <h3>Print JSON Array</h3>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Available</th>
+            <th>Ratings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--NgDirectives  eg: *ngFor-->
+        <tr *ngFor="let p of products">
+            <td>{{p.name}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.available}}</td>
+            <td>{{p.ratings}}</td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+
+[* NOTE: to implement bootstrap in angular app , include css and script tags from bootstrap official website to index.html file as below]
+
+
+save it and check the output
+
+
+
+
+
+
 
 
 

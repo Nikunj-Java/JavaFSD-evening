@@ -13,3 +13,30 @@
 <hr>
 
 <a [href]="url">Connect to Google</a>
+
+<br>
+<hr>
+<img [src]="imageUrl" style="width: 20%;" >
+
+<h3>Print JSON Array</h3>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Available</th>
+            <th>Ratings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--NgDirectives  eg: *ngFor-->
+        <tr *ngFor="let p of products">
+            <td>{{p.name}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.available}}</td>
+            <td>{{p.ratings}}</td>
+
+        </tr>
+    </tbody>
+</table>
