@@ -67,3 +67,45 @@ how .ts converts .js we can configure in this file
 
 
 >tsc --init (will create tsconfig.json file and we can chheck the same)
+
+
+----------------------------------------------------------------------------
+STEP: 3 INSTALLING ANGULAR ON YOUR MACHINE
+----------------------------------------------------------------------------
+
+let's install angular
+
+>npm install -g @angular/cli (OR npm i -g @angular/cli)
+
+
+to check the version
+
+>ng --version
+
+
+let's create angular project
+*****************************************
+
+>ng new myapp (you can give any name)
+
+	it will ask you two questions
+	1. do you want to add angular routing ?: Y
+	2. Choose CSS:CSS
+once the app is prepared you need to change the directory in cmd 
+>cd myapp
+
+
+to start your angular app
+>ng serve
+
+
+once the app started goto the borwser and open localhost:4200 and hit enter
+
+goto src>app>app.component.html file and edit the code whatever you want
+
+
+<h1> My First Angular App</h1>
+
+
+save it , it will be automatically updated in browser, that you cab check the same
+
