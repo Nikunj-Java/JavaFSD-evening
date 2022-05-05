@@ -153,3 +153,72 @@ save it and you will be able to see the output in your browser
 
 
 similarly you can prepare footer component and integrate using above steps
+
+
+
+----------------------------------------------------------------------------
+STEP: 5 DATA BINDING
+----------------------------------------------------------------------------
+
+TYPES
+1. SOURCE TO VIEW (.ts to .html)
+2. VIEW TO SOURCE (.html to .ts)
+3. SOURCE TO VIEW TO SOURCE (two way binding)
+
+
+data bindings can be done in two ways
+	1. Interpolation Binding {{}}
+	2. Property Binding [ ]
+let;s prepare binding component from node js and add following command
+
+
+> ng g c binding ///binding is a name component
+
+
+to bind the data goto binding.component.ts and add the following code at the last
+
+ 	name:string="Nikunj Soni";
+  	url:string ="https://www.google.com";
+
+
+goto>binding.component.html add the following
+
+
+
+
+<h1>Data Binding</h1>
+
+<!--use interpolation -->
+<h2>Let's bind the data from source to view using interpolation</h2>
+
+<hr>
+
+<p>{{name}}</p>
+
+
+<h1>let's bind the data from source to view using property Binding:[] :bind the value with attribute</h1>
+
+<hr>
+
+<a [href]="url">Connect to Google</a>
+
+
+
+go to> app.component.html and copy the selector name tag
+
+
+like below
+
+
+<app-binding></app-binding>
+
+
+save it and check the output in browser
+
+
+
+***************************************************************************
+
+
+
+
