@@ -40,3 +40,11 @@
         </tr>
     </tbody>
 </table>
+
+<div class="container">
+    <button class="btn btn-primary" (click)="show()">Show Div</button>
+
+    <div *ngIf="flag" style="background-color: yellowgreen;">
+        This is My Div and You have implemented Event Binding
+    </div>
+</div>
