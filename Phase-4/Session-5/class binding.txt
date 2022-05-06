@@ -1,0 +1,24 @@
+****************************************************************************
+
+STep: CLASS BINDING
+
+****************************************************************************
+
+the app is already prepared containing binding component
+
+prepare one class named as inStock in binding.component.css
+
+.inStock{
+    background-color: green;
+    color:white;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    
+}
+
+
+
+goto> binding.component.html file and bind the class using below tag
+
+
