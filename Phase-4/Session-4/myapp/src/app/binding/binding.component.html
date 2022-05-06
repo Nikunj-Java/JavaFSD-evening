@@ -33,9 +33,9 @@
         <!--NgDirectives  eg: *ngFor-->
         <tr *ngFor="let p of products">
             <td [class.inStock]="true">{{p.name}}</td>
-            <td>{{p.price}}</td>
+            <td [style.font-weight]="we">{{p.price}}</td>
             <td [class.inStock1]="true">{{p.available}}</td>
-            <td>{{p.ratings}}</td>
+            <td [style.font-weight]="we">{{p.ratings}}</td>
 
         </tr>
     </tbody>

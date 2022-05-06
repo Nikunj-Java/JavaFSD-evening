@@ -15,7 +15,8 @@ export class BindingComponent implements OnInit {
   name:string="Nikunj Soni";
   url:string ="https://www.google.com";
   imageUrl:string="./assets/nature.jpg";
-
+  we:number=700;
+  
   products=[{name:"pencile",price:"8.3",available:"06-05-2022",ratings:4.8},
             {name:"pen",price:"10",available:"10-05-2022",ratings:4.8},
             {name:"eraser",price:"5.5",available:"06-06-2022",ratings:4.8},

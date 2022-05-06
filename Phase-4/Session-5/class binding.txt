@@ -21,4 +21,26 @@ prepare one class named as inStock in binding.component.css
 
 goto> binding.component.html file and bind the class using below tag
 
+ <td [class.inStock]="true">{{p.name}}</td>
+
+
+
+***************************************************************************
+
+STEP: STYLE BINDING
+
+***************************************************************************
+
+prepare one number with any name say 'we' in binding.component.ts
+
+we:number=700;
+
+
+now bind the data in binding.component.html
+
+<td [style.font-weight]="we">{{p.price}}</td>
+
+
+save the file and check the out put
+
 
