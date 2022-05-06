@@ -1,0 +1,12 @@
+h1,h2,h3,h4{
+   
+    color: slateblue;
+}
+input{
+    background-color: darkgray;
+    color: white;
+    font-size: large;
+}
+b{
+    color: red;
+}

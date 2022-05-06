@@ -1,9 +1,21 @@
-<h1>Child Component</h1>
 
-<br>
-<p>Value coming from Parent Component: <b>{{pdata}}</b></p>
+
 
 <hr>
-<br>
+<div class="container">
+    <h1>Child Component</h1>
 
-<input type="text" #cdata (keyup)="onChange(cdata.value)">
+<h4>Value coming from Parent Component: <b>{{pdata}}</b></h4>
+
+ 
+<br>
+    <div class="row">
+      <div class="col-sm-3">
+        <h3> Enter The Value: </h3>
+      </div>
+      <div class="col-sm-3">
+        <input type="text" #cdata (keyup)="onChange(cdata.value)">
+      </div>
+    </div>
+  </div>
+

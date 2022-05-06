@@ -1,13 +1,36 @@
-<h1>Component Interaction</h1>
 
-<h1>Paprent Component</h1>
 
 <!--Parent to the child Communication-->
 
-<input type="text" (keyup)="0" #ptext>
+<div class="container">
+   
+   <h2>Paprent Component</h2>
+  <div class="row">
+    <div class="col-sm-3">
+      <h3> Enter The Value: </h3>
+    </div>
+    <div class="col-sm-3">
+     <input type="text" (keyup)="0" #ptext>
+    </div>
 
-<!--child to parent communication-->
+    <div class="col-sm-3">
+      
+     </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+         <!--child to parent communication-->
+       <h4>Received from Child Component: <b>{{cdata}}</b></h4>
+    </div>
 
-<p>Value Receivedfrom Child Component: <b>{{cdata}}</b></p>
+  </div>
+</div>
+
+ 
+    
+   
+ 
+
+ 
 
 <app-child [pdata]="ptext.value" (cevent)="cdata=$event"></app-child>
