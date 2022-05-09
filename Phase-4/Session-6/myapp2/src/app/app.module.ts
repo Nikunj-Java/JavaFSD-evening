@@ -3,18 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DemoComponent } from './demo/demo.component';
+import { changeColorDirective } from './changeColorDirective';
+import { HighlightDirective } from './HighlightDirectives';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoComponent
+    changeColorDirective,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
