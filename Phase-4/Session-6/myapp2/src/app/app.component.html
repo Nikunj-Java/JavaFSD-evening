@@ -5,6 +5,16 @@
 <div *ngIf="flag">
     This Div is Visible
 </div>
+
+<div [ngSwitch]="'one'">
+    <div *ngSwitchCase="'one'">One is Displayed</div>
+    <div *ngSwitchCase="'two'">Two is Displayed</div>
+    <div *ngSwitchDefault>Default Option is Displayed</div>
+    </div>
+
+     
+    
+    <app-pipedemo></app-pipedemo>
   
 
   
