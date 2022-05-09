@@ -1,5 +1,29 @@
 <h1>Demo App</h1>
-<h2 changecolor> Hello World</h2>
+
+
+<div class="container">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="home" >Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="about" >AboutUs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="contact" >Contact US</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="demo" >Demo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="pipe" >Pipes</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+
+    <h2 changecolor> Hello World</h2>
 <h3 highlight> Hello</h3>
 
 <div *ngIf="flag">
@@ -13,8 +37,12 @@
     </div>
 
      
+
+
+</div>
+
     
-    <app-pipedemo></app-pipedemo>
-  
+    
+  <router-outlet></router-outlet>
 
   

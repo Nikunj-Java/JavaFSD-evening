@@ -8,6 +8,9 @@ import { HighlightDirective } from './HighlightDirectives';
 import { UserService } from './user.service';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { CustomPipe } from './custompipe';
+import { HomeComponent } from './home/home.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { CustomPipe } from './custompipe';
     changeColorDirective,
     HighlightDirective,
     PipedemoComponent,
-    CustomPipe
+    CustomPipe,
+    HomeComponent,
+    AboutusComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
