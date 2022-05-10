@@ -11,6 +11,8 @@ import { CustomPipe } from './custompipe';
 import { HomeComponent } from './home/home.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { UserComponent } from './user/user.component';
+import { UserdemoComponent } from './userdemo/userdemo.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ContactusComponent } from './contactus/contactus.component';
     CustomPipe,
     HomeComponent,
     AboutusComponent,
-    ContactusComponent
+    ContactusComponent,
+    UserComponent,
+    UserdemoComponent
   ],
   imports: [
     BrowserModule,

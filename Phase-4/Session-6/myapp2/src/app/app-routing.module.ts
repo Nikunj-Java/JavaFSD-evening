@@ -5,6 +5,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { DemoComponent } from './demo/demo.component';
 import { HomeComponent } from './home/home.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
+ 
 
 const routes: Routes = [
   //path to fredirect
@@ -13,6 +14,7 @@ const routes: Routes = [
   {"path":"contact",component:ContactusComponent},
   {"path":"demo",component:DemoComponent},
   {"path":"pipe",component:PipedemoComponent},
+   
 
 ];
 

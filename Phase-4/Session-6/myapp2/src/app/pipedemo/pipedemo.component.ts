@@ -18,6 +18,6 @@ export class PipedemoComponent implements OnInit {
   today= new Date();
   object={name:"nikunj",email:"nikunj@gmail.com",address:"mumbai"};
 
-  cust:string="Welcome to the World of Custom Pipes"
+  cust:string="Welcome to the World of Custom Pipes";
 
 }
