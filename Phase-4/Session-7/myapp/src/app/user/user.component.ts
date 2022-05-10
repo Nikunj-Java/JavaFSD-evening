@@ -9,16 +9,14 @@ import { UserClass } from '../userclass';
 })
 export class UserComponent implements OnInit {
 
-  //inject the service
+ //inject service
+ constructor( private service:DataService) { }
 
-  constructor(private service:DataService) { }
+ users:UserClass[];
+ ngOnInit(): void {
+   this.service.getAllUsers().subscribe(result=>this.users=result);
+ }
 
-  users:UserClass[];
 
-
-  ngOnInit(): void {
-
-    this.service.getAllUsers().subscribe(result=>this.users=result);
-  }
 
 }
