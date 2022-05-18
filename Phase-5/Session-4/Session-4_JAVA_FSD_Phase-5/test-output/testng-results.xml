@@ -1,49 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-18T19:57:03 IST" name="Default suite" finished-at="2022-05-18T19:57:03 IST" duration-ms="197">
+  <suite started-at="2022-05-18T20:24:28 IST" name="Default suite" finished-at="2022-05-18T20:24:38 IST" duration-ms="9576">
     <groups>
+      <group name="firefox">
+        <method signature="GroupTest.launchFirefox()[pri:0, instance:com.simplilearn.demo.GroupTest@dbf57b3]" name="launchFirefox" class="com.simplilearn.demo.GroupTest"/>
+        <method signature="GroupTest.loginwithFirefox()[pri:0, instance:com.simplilearn.demo.GroupTest@dbf57b3]" name="loginwithFirefox" class="com.simplilearn.demo.GroupTest"/>
+      </group> <!-- firefox -->
+      <group name="Chrome">
+        <method signature="GroupTest.launchChrome()[pri:0, instance:com.simplilearn.demo.GroupTest@dbf57b3]" name="launchChrome" class="com.simplilearn.demo.GroupTest"/>
+        <method signature="GroupTest.loginwithChrome()[pri:0, instance:com.simplilearn.demo.GroupTest@dbf57b3]" name="loginwithChrome" class="com.simplilearn.demo.GroupTest"/>
+      </group> <!-- Chrome -->
     </groups>
-    <test started-at="2022-05-18T19:57:03 IST" name="Default test" finished-at="2022-05-18T19:57:03 IST" duration-ms="197">
-      <class name="com.simplilearn.demo.AutomaticAnnotationDemo">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.simplilearn.demo.AutomaticAnnotationDemo@6d763516]" started-at="2022-05-18T19:57:03 IST" name="beforeSuite" finished-at="2022-05-18T19:57:03 IST" duration-ms="19" status="PASS">
+    <test started-at="2022-05-18T20:24:28 IST" name="Default test" finished-at="2022-05-18T20:24:38 IST" duration-ms="9576">
+      <class name="com.simplilearn.demo.GroupTest">
+        <test-method signature="launchChrome()[pri:0, instance:com.simplilearn.demo.GroupTest@dbf57b3]" started-at="2022-05-18T20:24:28 IST" name="launchChrome" finished-at="2022-05-18T20:24:37 IST" duration-ms="8742" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.simplilearn.demo.AutomaticAnnotationDemo@6d763516]" started-at="2022-05-18T19:57:03 IST" name="beforeTest" finished-at="2022-05-18T19:57:03 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- launchChrome -->
+        <test-method signature="launchFirefox()[pri:0, instance:com.simplilearn.demo.GroupTest@dbf57b3]" started-at="2022-05-18T20:24:37 IST" name="launchFirefox" finished-at="2022-05-18T20:24:37 IST" duration-ms="59" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[The path to the driver executable The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: The path to the driver executable The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+at org.openqa.selenium.internal.Require$StateChecker.nonNull(Require.java:311)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:135)
+at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:45)
+at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:181)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:437)
+at org.openqa.selenium.firefox.GeckoDriverService.createDefaultService(GeckoDriverService.java:94)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:106)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:86)
+at com.simplilearn.demo.GroupTest.launchFirefox(GroupTest.java:49)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.simplilearn.demo.AutomaticAnnotationDemo@6d763516]" started-at="2022-05-18T19:57:03 IST" name="beforeClass" finished-at="2022-05-18T19:57:03 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- launchFirefox -->
+        <test-method signature="loginwithChrome()[pri:0, instance:com.simplilearn.demo.GroupTest@dbf57b3]" started-at="2022-05-18T20:24:37 IST" name="loginwithChrome" finished-at="2022-05-18T20:24:37 IST" depends-on-methods="com.simplilearn.demo.GroupTest.launchChrome" duration-ms="636" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.simplilearn.demo.AutomaticAnnotationDemo@6d763516]" started-at="2022-05-18T19:57:03 IST" name="beforeMethod" finished-at="2022-05-18T19:57:03 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- loginwithChrome -->
+        <test-method signature="loginwithFirefox()[pri:0, instance:com.simplilearn.demo.GroupTest@dbf57b3]" started-at="2022-05-18T20:24:38 IST" name="loginwithFirefox" finished-at="2022-05-18T20:24:38 IST" depends-on-methods="com.simplilearn.demo.GroupTest.launchFirefox" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method com.simplilearn.demo.GroupTest.loginwithFirefox() on instance com.simplilearn.demo.GroupTest@dbf57b3 depends on not successfully finished methods 
+[com.simplilearn.demo.GroupTest.launchFirefox() on instance com.simplilearn.demo.GroupTest@dbf57b3]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method com.simplilearn.demo.GroupTest.loginwithFirefox() on instance com.simplilearn.demo.GroupTest@dbf57b3 depends on not successfully finished methods 
+[com.simplilearn.demo.GroupTest.launchFirefox() on instance com.simplilearn.demo.GroupTest@dbf57b3]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:149)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="Hello()[pri:0, instance:com.simplilearn.demo.AutomaticAnnotationDemo@6d763516]" started-at="2022-05-18T19:57:03 IST" name="Hello" finished-at="2022-05-18T19:57:03 IST" duration-ms="21" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Hello -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.simplilearn.demo.AutomaticAnnotationDemo@6d763516]" started-at="2022-05-18T19:57:03 IST" name="afterMethod" finished-at="2022-05-18T19:57:03 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.simplilearn.demo.AutomaticAnnotationDemo@6d763516]" started-at="2022-05-18T19:57:03 IST" name="afterClass" finished-at="2022-05-18T19:57:03 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.simplilearn.demo.AutomaticAnnotationDemo@6d763516]" started-at="2022-05-18T19:57:03 IST" name="afterTest" finished-at="2022-05-18T19:57:03 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.simplilearn.demo.AutomaticAnnotationDemo@6d763516]" started-at="2022-05-18T19:57:03 IST" name="afterSuite" finished-at="2022-05-18T19:57:03 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.simplilearn.demo.AutomaticAnnotationDemo -->
+        </test-method> <!-- loginwithFirefox -->
+      </class> <!-- com.simplilearn.demo.GroupTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
