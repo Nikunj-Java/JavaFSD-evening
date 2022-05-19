@@ -25,3 +25,6 @@ java -jar jenkins.war
 	CLICK> NEXT
 6. SELECT Install Suggested plugins
 7. add personal Details and registration
+
+---------------------------------------------------------------------------
+

@@ -1,0 +1,46 @@
+Jenkis part:
+
+step:1 Maven Integration
+
+goto> manage jenkins> manageplugins> available> search for maven integration > install without restart
+
+Step:2 Preparing Maven Project
+
+goto> dashboard> Create new Job> Give Project Name> choose maven Project> ok
+
+scroll down goto build> there you will see one error
+click on it and resolve the error by giving java home path and maven version
+
+
+or goto> buildtool from jenkins dashboard and do the same
+
+JDK:
+
+
+name: JAVA_HOME
+path: C:\Program Files\Java\jdk1.8.0_202\
+
+
+scroll down and add maven
+
+MAVEN:
+
+name: MAVEN
+
+version: choose your maven version from eclips
+
+goto>eclips>windows>preferences>maven>installtion> check your version
+
+
+save it 
+
+now come back to your project and add pom.xml files path
+
+as: D:\Workspace-phase5\Session-4_JAVA_FSD_Phase-5\pom.xml
+
+
+in GOALS and OPTIONS : clean test
+
+Click on APPLY and SAVE
+
+Click on BUILD
