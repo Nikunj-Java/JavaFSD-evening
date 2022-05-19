@@ -1,0 +1,43 @@
+*****************************************************************************
+STEP:1 Download Selenium standalone server file
+*****************************************************************************
+link: https://www.selenium.dev/downloads/
+
+download selenium-standalone-server-3.5.0 or 3.5.0.jar file
+
+*****************************************************************************
+STEP:2  SET UP HUB
+*****************************************************************************
+
+copy the selenium-standalone-server-3.5.0.jar file to desire directory and open cmd and move to the same directory, then execute below code
+
+> java -jar selenium-server-standalone-3.5.0.jar -role hub
+
+-------extra: for port change---------
+> java -jar selenium-server-standalone-3.5.0.jar -role hub -port 4445
+
+
+execute this command and your hub is ready for use
+
+copy the ip address from cmd
+
+goto> browser: http://ipaddress/grid/console
+eg: http://192.168.0.103:4444/grid/console
+
+*****************************************************************************
+STEP:3 PREPARING NODE
+*****************************************************************************
+
+now open another cmd and move to the same root directory as you had done above
+let's prepare Node with Googlechome driver
+
+
+> java -Dwebdriver.chrome.driver="C:\Program Files\Google\Chrome\Application\chromedriver.exe" -jar selenium-server-standalone-3.5.0.jar -role node -hub http://192.168.0.103:4444/grid/register/
+
+
+
+now goto>http://192.168.0.103:4444/grid/console 
+
+check the output
+
+[**NOTE: change the ip address of your as it different for different machine]
