@@ -1,0 +1,26 @@
+to launch a website in EC2 Instance
+
+download moba X-Term 
+link: https://mobaxterm.mobatek.net/
+
+goto> moba x-term select: start local terminal
+
+as it is similar to cmd but having some different syntax to move back to some directory
+
+> to change the folder  where you had downloaded instance.pem file
+
+cd ..
+cd ..
+cd d:
+cd Phase-5
+
+now> goto> aws>instance>connect>ssh client> copy the address +enter
+
+you will be connected to your instance using your machine
+
+
+> sudo su -
+> yum install httpd -y
+> cd /var/www/html
+> vi index.html
+
