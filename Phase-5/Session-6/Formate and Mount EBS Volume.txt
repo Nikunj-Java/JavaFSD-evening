@@ -1,0 +1,31 @@
+1. Prepare EBS Volume
+2. Attach EBS Volume to the Running Instance
+3. goto> instances>connect>EC2 Instance Connect>Connect
+
+	or
+	Connect Using moba x-term as Already Exaplained in Previous example
+
+List available disk
+
+> lsblk
+
+To check if the volume has any data or not
+
+> sudo file -s /dev/xvdf
+
+To Formate drive to ext4 partition system
+
+>sudo mkfs -t ext4 /dev/xvdf
+
+To change the name of directory
+
+> sudo mkdir /newvolume
+
+To mount the drive
+
+> sudo mount /dev/xvdf/ newvolume/
+
+To unmount 
+> sudo umount /dev/xvdf
+
+
