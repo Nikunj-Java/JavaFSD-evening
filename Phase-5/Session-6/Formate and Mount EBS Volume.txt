@@ -23,7 +23,15 @@ To change the name of directory
 
 To mount the drive
 
-> sudo mount /dev/xvdf/ newvolume/
+Use the following command to mount the volume:
+
+>sudo mount /dev/xvdf /newvolume/
+
+Check the disk space using the following command:
+
+> cd /newvolume
+> df -h .
+
 
 To unmount 
 > sudo umount /dev/xvdf
