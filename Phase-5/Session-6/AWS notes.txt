@@ -16,6 +16,8 @@ cd Phase-5
 
 now> goto> aws>instance>connect>ssh client> copy the address +enter
 
+if its not connecting or session time out error is occurerd:   copy the address and press enter again until you got connected
+
 you will be connected to your instance using your machine
 
 
@@ -24,3 +26,10 @@ you will be connected to your instance using your machine
 > cd /var/www/html
 > vi index.html
 
+press 'i' to insert into html page
+
+> write something like: <h1> Welcome to AWS Cloud </h1>
+
+press 'esc' 
+>:wq! +enter
+> service httpd start
