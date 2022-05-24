@@ -1,0 +1,94 @@
+Create 2 instance in your aws ec2 (ubuntu)
+
+make one instance as masternode
+another as worker node
+----------------------------------------
+
+install docker in both instance.
+configure /etc/host file to define master and worker ip
+
+goto> masternode >moba-xterm edit the file 
+
+>sudo vi /etc/hosts
+
+press 'i'
+
+masterNodePrivateIp master
+
+press 'esc' 
+:wq! hit enter
+
+> ping master
+
+
+now do the same with worker node
+
+goto> masternode >moba-xterm edit the file 
+
+>sudo vi /etc/hosts
+
+press 'i'
+
+WorkerNodePrivateIp worker1
+
+press 'esc' 
+:wq! hit enter
+
+> ping worker
+
+-------------------------------------------------------
+
+
+now you will see that both pings are woking perfectly
+
+to stop the ping you can press ctr+c in both moba x-term terminal to stop ping
+
+
+*****************************************************************
+
+Let's initialize sawrm cluster
+
+*****************************************************************
+masterNode:
+
+
+> sudo docker swarm init --advertise-addr 172.31.31.115(private ip address of master node)
+
+your master node will become leader and you must seen one token available that you can use to join from other node
+
+for me token was:
+
+docker swarm join --token SWMTKN-1-1g60cjzx216qi0xn90d0e68h3ghhnpta29oaarsmf8q6apypzd-56yi8b26r1jci1ixafm8bp20q 172.31.31.115:2377
+
+
+execute that token command from worker node to join swarm as a worker
+
+eg: sudo your_token
+> sudo docker swarm join --token SWMTKN-1-1g60cjzx216qi0xn90d0e68h3ghhnpta29oaarsmf8q6apypzd-56yi8b26r1jci1ixafm8bp20q 172.31.31.115:2377
+
+
+(you will see master and node manegerial status as leader and worker node blank)
+
+
+
+create Service with 2 replicas
+-----------------------------------
+
+ecexute docker login command from both the nodes so that you can run the images which is availabl;e on your docker hub
+
+
+>sudo docker login
+userid:
+password:
+
+
+> sudo docker service create --name clusterservice1 --publish 8082:8082 --replicas 2 nikunj0510/firstimage
+
+> sudo docker service ps clusterservice1
+
+check the service is running on workernode and anothe is running on masternode
+
+
+
+
+
