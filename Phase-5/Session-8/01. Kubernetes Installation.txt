@@ -56,3 +56,46 @@ link: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/inst
 --- to check cube ctl version
 > kubectl version
 
+*********************************************************
+STEP: 1 DISABLING SWAPP
+*********************************************************
+> sudo swapoff -a
+> sudo sed -i '/ swap / s/^/#/' /etc/fstab
+
+
+*********************************************************
+STEP: 2 ADDING C GROUP
+*********************************************************
+EDIT DOCKER DAEMON FILE
+
+> sudo vi /etc/docker/daemon.json
+
+press 'i' and inser the below mentioned code
+
+{
+"exec-opts":["native.cgroupdriver=systemd"]
+}
+
+
+press esc;
+type :wq!
+
+hit enter
+
+
+once the file updated we need to restart the services
+
+>sudo systemctl daemon-relod
+>sudo systemctl restart docker
+>sudo systemctl restart kublet
+>sudo docker info |grep -i cgroup
+
+*********************************************************
+Initialize Kubernetes
+*********************************************************
+
+> sudo kubeadm init
+
+ 
+
+
