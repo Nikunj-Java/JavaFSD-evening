@@ -85,17 +85,56 @@ hit enter
 
 once the file updated we need to restart the services
 
->sudo systemctl daemon-relod
+>sudo systemctl daemon-reload
 >sudo systemctl restart docker
->sudo systemctl restart kublet
+>sudo systemctl restart kubelet
 >sudo docker info |grep -i cgroup
 
-*********************************************************
-Initialize Kubernetes
-*********************************************************
 
-> sudo kubeadm init
+check the cgroup and version if it is coming you are all set to go ahead
+
+*********************************************************
+Let's initialize cluster again
+*********************************************************
+> sudo kubeadm init --ignore-preflight-errors=all
+
+ you will get message your kubernates initiated successfully
+
+
+if not works
+
+> sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
+
+
+*********************************************************
+get a node details by executing following command
+*********************************************************
 
  
+
+
+> kubectl get node
+
+
+if you want to see the cluster details
+> kubectl get svc
+
+
+once cluster is started if you want to deploy your any code you can deploy on it
+
+
+
+let's deploy weave network for cluster
+
+>export kubever=$(kubectl version | base64 | tr -d '\n')
+>kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubeve"
+
+
+validating the running pods
+
+> kubectl get pods
+
+*********************************************************
+
 
 
