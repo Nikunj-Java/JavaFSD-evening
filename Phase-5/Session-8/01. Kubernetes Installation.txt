@@ -175,11 +175,17 @@ goto> aws> stop the instance and restart it and connect again using moba x-term
 
 >kubectl run springbootapp --image=springboot --port=8080
 
+you will get msg that : pod/springbootapp created
+
+
 >kubectl get pods
 
-*********** Create Deployment Service ******************88
+*********** Create Deployment Service ********************
 
 kubectl expose pod/springbootapp --port=8081 --target-port=8081 --type=LoadBalancer
+
+you will get msg that : service/springbootapp exposed
+
 
 kubectl get services
 
