@@ -42,13 +42,13 @@ link: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/inst
 
 >sudo apt-get update
 
->sudo apt-get install -y kubelet kubeadm kubectl
+>sudo apt-get install -y kubelet=1.22.8-00 kubectl=1.22.8-00 kubeadm=1.22.8-00
 
->sudo apt-mark hold kubelet kubeadm kubectl
+> sudo apt-mark hold kubelet kubeadm kubectl 
 
 
 --to check the version-------
-
+> kubelet --version
 
 > kubeadm version
 
@@ -85,9 +85,7 @@ hit enter
 
 once the file updated we need to restart the services
 
->sudo systemctl daemon-reload
->sudo systemctl restart docker
->sudo systemctl restart kubelet
+>sudo systemctl daemon-reload && sudo systemctl restart docker && sudo systemctl restart kubelet
 >sudo docker info |grep -i cgroup
 
 
@@ -106,35 +104,68 @@ if not works
 > sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
 
 
+****you will get some command if you want to start cluster as a regular user
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
 *********************************************************
 get a node details by executing following command
 *********************************************************
 
  
 
-
+ 
 > kubectl get node
 
-
 if you want to see the cluster details
-> kubectl get svc
 
+>kubectl get svc
 
-once cluster is started if you want to deploy your any code you can deploy on it
+Once the cluster is started if you want to deploy your any code you can deploy on it.
 
-
-
-let's deploy weave network for cluster
-
+let's deploy weave network to cluster
 >export kubever=$(kubectl version | base64 | tr -d '\n')
->kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubeve"
+>kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
 
+Validate the running pods
 
-validating the running pods
+>kubectl get pods --all-namespaces
 
-> kubectl get pods
+****************************************************************************************
+Host a springboot application in kubernetes Pods
+-----------------------------------------------------------
 
-*********************************************************
+>git clone https://github.com/Nikunj-Java/SpringBootDockerApp.git
+
+let's install Maven
+
+>sudo apt-get update && sudo apt install maven -y
+
+> cd SpringBootDocker
+
+>mvn clean install (create jar file)
+
+*** build image **********
+
+>sudo docker build -t springboot .
+
+>sudo docker images
+
+>kubectl run springbootapp --image=springboot --port=8080
+
+>kubectl get pods
+
+*********** Create Deployment Service ******************88
+
+kubectl expose pod/springbootapp --port=8081 --target-port=8081 --type=LoadBalancer
+
+kubectl get services
+
+kubectl describe svc springbootapp
+
 
 
 
