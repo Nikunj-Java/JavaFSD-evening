@@ -70,7 +70,7 @@ EDIT DOCKER DAEMON FILE
 
 > sudo vi /etc/docker/daemon.json
 
-press 'i' and inser the below mentioned code
+press 'i' and insert the below mentioned code
 
 {
 "exec-opts":["native.cgroupdriver=systemd"]
@@ -99,7 +99,7 @@ Let's initialize cluster again
  you will get message your kubernates initiated successfully
 
 
-if not works
+*********if not works
 
 > sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
 
@@ -109,6 +109,7 @@ if not works
   mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
 
 
 *********************************************************
@@ -127,6 +128,7 @@ if you want to see the cluster details
 Once the cluster is started if you want to deploy your any code you can deploy on it.
 
 let's deploy weave network to cluster
+
 >export kubever=$(kubectl version | base64 | tr -d '\n')
 >kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
 
@@ -136,17 +138,34 @@ Validate the running pods
 
 ****************************************************************************************
 Host a springboot application in kubernetes Pods
------------------------------------------------------------
+----------------------------------------------------------
+Step: 1
 
 >git clone https://github.com/Nikunj-Java/SpringBootDockerApp.git
-
-let's install Maven
+-----------------------------------
+Step: 2 let's install Maven
+-----------------------------------
 
 >sudo apt-get update && sudo apt install maven -y
+
+-----------------------------------
+Step: 3 let's install JDK
+-----------------------------------
+
+sudo apt-get update && sudo apt install default-jdk -y
+-----------------------------------
 
 > cd SpringBootDocker
 
 >mvn clean install (create jar file)
+
+goto> aws> stop the instance and restart it and connect again using moba x-term 
+
+> git clone https://github.com/Nikunj-Java/SpringBootDockerApp.git
+
+> cd SpringBootDocker
+
+> mvn clean install (create jar file)
 
 *** build image **********
 
